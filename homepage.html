@@ -5,8 +5,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papperfry</title>
+    <link rel="website icon" type="png"
+     href="./wesiteIcon.jpeg">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: Manrope, sans-serif;
+        }
+        #nav-left{
+            display:flex;
+            gap:20px;
+            margin-left: 100px;
+            font-size: 15px;
+        }
+        #nav-left a:hover{
+            color: red;
+            cursor: pointer;
+        }
+        #nav-right{
+            display:flex;
+            gap:20px;
+            margin-right: 100px;
+            font-size: 14px;
+        }
+        .navbar-1{
+            width:100%;
+            height: 40px;
+            display:flex;
+            align-items: center;
+            margin: auto;
+            justify-content: space-between;
+            box-sizing: border-box;
+            background-color: #F5F5F5;
+            
+        }
+        .navbar-1 a{
+            color:#362712;
+            text-decoration: none;
+        }
+        #nav-right a:nth-child(2){
+            color: #FF775A;
+            text-decoration: underline;
+        }
+        #edit{
+            width:17px;
+            height:17px;
+        }
+        .nav-middle{
+            width:100%;
+            height: 80px;
+            display:flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 100px;
+            padding-right: 100px;
+            
+        }
+       
+        .nav-middle > div >img{
+            width:100%;
+            height:75px;
+        }
+
+        form{
+           height:40px;
+           display: flex;
+           align-items: center;
+           background-color: #F5F5F5;
+        }
+        form > input{
+          width: 800px;
+          border: none;
+          font-size: 17px;
+          background-color: #F5F5F5;
+        }
+        #images img{
+           width:30px;
+           height:30px;
+           margin-right: 10px;
+          
+        }
+        .navbar-2{
+            width:100%;
+            height:40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid #F5F5F5;
+            padding-left: 100px;
+            padding-right: 100px;
+            box-sizing: border-box;
+        }
+        .navbar-2 > a{
+           text-decoration: none;
+           color: black;
+           font-size: 15px;
+        }
+    </style>
 </head>
 <body>
-    <p>hello</p>
+    <div class="navbar-1">
+   <div id="nav-left">
+    <a href="#">Sell on Pepperfry</a>
+    <a href="#">Become a Franchisee</a>
+    <a href="#">Buy in Bulk</a>
+    <a href="#">Find a Studio</a>
+   </div>
+   <div href="#" id="nav-right">
+    <a href="#">Enter pincode
+        <img id="edit" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/external-edit-basic-ui-anggara-basic-outline-anggara-putra.png" alt="">
+    </a>
+    <a href="#">Find Pepperfry Studio</a>
+   </div>
+</div>
+<div class="nav-middle">
+    <div>
+        <img src="./logo new.png" alt="error">
+    </div>
+    <div>
+        <form>
+            <input type="text" placeholder="Your door to happiness opens with a search" id="search">
+            <img src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="error">
+        </form>
+    </div>
+    <div id="images">
+        <img src="https://img.icons8.com/external-vectorslab-flat-vectorslab/53/external-Help-Chat-customer-support-vectorslab-flat-vectorslab-2.png" alt="error">
+        <img src="https://img.icons8.com/material-sharp/256/user.png" alt="error">
+        <img src="https://img.icons8.com/ios/256/like.png" alt="error">
+        <img src="https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/256/external-Add-To-Cart-mobile-shopping-smashingstocks-detailed-outline-smashing-stocks-4.png" alt="error">
+    </div>
+</div>
+<div class="navbar-2">
+    <a href="#">Furniture</a>
+    <a href="#">Home Decor</a>
+    <a href="#">Lamps & Lighting</a>
+    <a href="#">Kitchen & Dining</a>
+    <a href="#">Furnishings</a>
+    <a href="#">Mattresses</a>
+    <a href="#">Appliances</a>
+    <a href="#">Pets</a>
+    <a href="#">Modular</a>
+    <a href="#">Gift Cards</a>
+</div>
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="mainpage">
+    <div id="filter">
+        <select name="sort" id="sort">
+            <option value="">Normal</option>
+            <option value="High to low">High to low</option>
+            <option value="Low to high">Low to high</option>
+            
+        </select>
+        <hr>
+        <select id="Brand">
+            <option value="">Brand</option>
+            <option value="CasaCraft">CasaCraft</option>
+            <option value="ARRA">ARRA</option>
+        </select>
+       </div>
+       <div id="cardwraper">
+            <!-- product should append here -->
+        </div>
+</div>
+  
+</body>
+<script>
+   const api=`https://63f5b30259c944921f64b2be.mockapi.io/products`
+   let main=document.getElementById("cardwraper")
+   async function fetched (){
+      try {
+        let req= await fetch(api);
+        let res= await req.json();
+        display(res)
+        console.log(res)
+      } catch (error) {
+        console.log(error)
+      }
+   }
+   fetched()
+  function display(data){
+    let carditem=`
+    <div id="product">
+      ${data.
+        map((ele)=>
+        getcard(
+          ele.id,
+          ele.img,
+          ele.name,
+          ele.category,
+          ele.price,
+          ele.discount
+        )
+     
+      )
+    .join("")}
+  </div>`
+    main.innerHTML=carditem;
+    
+    addtoCard()
+  }
+ function getcard(id,img,name,category,price,discount){
+  card=`
+<div class="card" >
+  <div class="container" data-id=${id}>
+  <img src=${img} alt="" />
+  <div class="overlay"></div>
+   <div  data-id=${id} class="button"><a href="#" class="btn">Add to Cart</a></div>
+ </div>
+ <div class="info">
+   <h4>${name}</h4>
+   <p class="category">${category}</p>
+    <p class="price">₹ ${price}</p>
+  <p class="discount"> ${discount}% Off</p>
+ </div>
+</div>`
+ return card;
+ }
+
+ function addtoCard(){
+  let btn=document.querySelectorAll(".button");
+ 
+ 
+  for(let link of btn){
+    link.addEventListener("click",edit)
+  }
+   async function edit(e){
+   
+    console.log(e)
+      e.preventDefault()
+      let res= await fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
+      let data=await res.json();
+      console.log(data)
+      // let obj={
+      //   name:data.name,
+      //   category:data.category,
+      //   img:data.img,
+      //   price:data.price,
+      //   discount:data.discount,
+      //   id:data.id
+      // }
+      // console.log(obj)
+    }
+}
+</script>
+</html>

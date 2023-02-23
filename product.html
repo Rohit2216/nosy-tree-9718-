@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
@@ -13,39 +13,97 @@
 <body>
 <div id="mainpage">
     <div id="filter">
-        <select name="sort" id="sort">
-            <option value="">Normal</option>
-            <option value="High to low">High to low</option>
-            <option value="Low to high">Low to high</option>
-            
-        </select>
+      <h3>Sort by</h4>
+      <input type="radio" id="desc" name="Sort" value="desc">
+      <label for="desc">High to low</label><br>
+      <input type="radio" id="asc" name="Sort" value="asc">
+      <label for="asc">Low to High</label><br>
+      <input type="radio" id="Normal" name="Sort" value="Normal">
+      <label for="Normal">Normal</label><br>
+      <br> 
         <hr>
-        <select id="Brand">
-            <option value="">Brand</option>
-            <option value="CasaCraft">CasaCraft</option>
-            <option value="ARRA">ARRA</option>
-        </select>
+        
+        <h3>Brand</h3>
+        <input type="radio" id="CasaCraft " name="brand" value="CasaCraft ">
+        <label for="age1">CasaCraft </label><br>
+        <input type="radio" id="ARRA " name="brand" value="ARRA ">
+        <label for="ARRA ">ARRA</label><br>  
+        <input type="radio" id="Chumbak" name="brand" value="Chumbak">
+        <label for="Chumbak">Chumbak</label><br>
+        <input type="radio" id="Woodsworth" name="brand" value="Woodsworth">
+        <label for="Woodsworth">Woodsworth</label><br>
+        <input type="radio" id="DreamzzFurniture" name="brand" value="Dreamzz Furniture">
+        <label for="DreamzzFurniture">Dreamz Furniture</label><br><br>
+        <hr>
+        
+        
        </div>
        <div id="cardwraper">
             <!-- product should append here -->
+            
+            
         </div>
+        
+        
+        
+</div>
+<div id="pagination">
+  <!-- all button of pagination -->
 </div>
   
 </body>
 <script>
    const api=`https://63f5b30259c944921f64b2be.mockapi.io/products`
+   let btns=0;
+
+async function countData() {
+  let res = await fetch(`${api}`)
+  let data = await res.json()
+  // data = data.data
+  btns=Math.ceil(data.length/12);
+  paginationButton(btns)
+  
+}
+// sortBy=price&order=asc forsorting
+const radioInputs = document.querySelectorAll('input[name="Sort"]');
+  radioInputs.forEach(radioInput => {
+    radioInput.addEventListener('change', function() {
+       
+         let descApi=`${api}?sortBy=price&order=asc`
+         console.log(this.value)
+       
+    });
+  })
+
+countData()
+  fetched()
    let main=document.getElementById("cardwraper")
-   async function fetched (){
+   async function fetched (page=1){
       try {
-        let req= await fetch(api);
+        let req= await fetch(`${api}?page=${page}&limit=12`);
         let res= await req.json();
-        display(res)
-        console.log(res)
+
+        display(res);
+        // console.log(res)
       } catch (error) {
         console.log(error)
       }
    }
-   fetched()
+   
+   let pagebtn=document.getElementById("pagination")
+   function paginationButton(page){
+    let btn=[];
+    for(let i=1; i<=page; i++){
+      btn.push(`<button class="paginationBtn" data-page-number=${i}>${i}</button>`)
+    }
+    pagebtn.innerHTML=btn.join("");
+    const allButton=document.querySelectorAll("#pagination")
+    for( let btn of allButton){
+      btn.addEventListener("click",(e)=>{
+        fetched(e.target.dataset.pageNumber)
+      })
+    }
+   }
   function display(data){
     let carditem=`
     <div id="product">
@@ -62,6 +120,7 @@
      
       )
     .join("")}
+    
   </div>`
     main.innerHTML=carditem;
     
@@ -73,7 +132,7 @@
   <div class="container" data-id=${id}>
   <img src=${img} alt="" />
   <div class="overlay"></div>
-   <div  data-id=${id} class="button"><a href="#" class="btn">Add to Cart</a></div>
+   <div data-id=${id} class="button"><a href="#" data-id=${id} class="btn">Add to Cart</a></div>
  </div>
  <div class="info">
    <h4>${name}</h4>
@@ -84,7 +143,7 @@
 </div>`
  return card;
  }
-
+const data=JSON.parse(localStorage.getItem("cart"))||[];
  function addtoCard(){
   let btn=document.querySelectorAll(".button");
  
@@ -92,23 +151,30 @@
   for(let link of btn){
     link.addEventListener("click",edit)
   }
-   async function edit(e){
-   
-    console.log(e)
-      e.preventDefault()
-      let res= await fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
-      let data=await res.json();
-      console.log(data)
-      // let obj={
-      //   name:data.name,
-      //   category:data.category,
-      //   img:data.img,
-      //   price:data.price,
-      //   discount:data.discount,
-      //   id:data.id
-      // }
-      // console.log(obj)
+  
+    function edit(e){
+    e.preventDefault()
+    let id=e.target.dataset.id
+      let res= fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
+      res.then((data)=>{
+        return data.json()
+      })
+      .then((ele)=>{
+        let obj={}
+        
+        obj.name=ele.name,
+        obj.category=ele.category,
+        obj.img=ele.img,
+        obj.price=ele.price,
+        obj.discount=ele.discount,
+        obj.id=ele.id
+        data.push(obj)
+        localStorage.setItem("cart",JSON.stringify(data))
+      }) 
+       
     }
+    
+    
 }
 </script>
 </html>

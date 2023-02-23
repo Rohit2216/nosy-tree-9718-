@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
     /* height: 100vh;
@@ -109,3 +110,114 @@ body{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: white;
 }
+=======
+    font-family: 'Manrope', sans-serif;
+}
+#filter{
+
+    width: 20%;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+  
+  .container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+  }
+  
+  img {
+    width: 100%;
+    height: 300px;
+    left: 0;
+  }
+
+  .button {
+    position: absolute;
+    width:100%;
+    left:0;
+    top: 250px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  
+  .button a {
+    width: 100%;
+    padding: 12px 48px;
+    text-align: center;
+    color:white;
+    border: 2px solid white;
+   /* background-color: rgb(255,112,53); */
+    z-index: 1;
+  }
+  
+  .container:hover .button {
+    opacity: 1;
+  }
+  .btn{
+     text-decoration: none;
+  }
+  #product{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
+   
+   
+  }
+  .card{
+    
+    width: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  .info{
+    padding: 10px;
+  }
+  #mainpage{
+    display: flex;
+   
+  
+  }
+  .category{
+    color: rgb(143,143,143);
+  }
+  .price{
+    color: rgb(255,112,53);
+  }
+  .discount{
+    color: rgb(104,174,92);
+  }
+  @media screen and (max-width:700px) {
+    #mainpage{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      
+      }
+    #product{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 20px;
+        border: 1px solid black;
+       
+      }
+      #filter{
+        margin: auto;
+        width: 90%;
+        display: flex;
+        margin-bottom: 30px;
+    }
+  }
+>>>>>>> 6a6aaabab2b47efe1bf0c8c4da0ab15c218a8267

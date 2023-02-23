@@ -2,8 +2,17 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 #filter{
-
-    width: 20%;
+    
+    width: 16%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+}
+#cardwraper{
+  top: 0;
+  right: 0px;
+  margin-left: 230px;
 }
 .container {
     position: relative;
@@ -87,6 +96,41 @@ body{
   .discount{
     color: rgb(104,174,92);
   }
+  #pagination{
+    display: flex;
+    height: 30px;
+    width: 20%;
+    margin-left: 230px;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    
+
+  }
+  #pagination>button{
+    display: block;
+   background-color: white;
+   width: 70px;
+  }
+  #pagination>button:hover{
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    color: white;
+  }
+  .btnright{
+    display:block;
+    margin:auto;
+    width:90%;
+    height: 30px;
+    background-color: transparent;
+    font-size: medium;
+  }
+  .btnright:hover{
+    cursor:pointer;
+    color: white;
+    /* border: 5px solid white; */
+    background-color: black;
+  }
   @media screen and (max-width:700px) {
     #mainpage{
         display: flex;
@@ -102,9 +146,17 @@ body{
        
       }
       #filter{
-        margin: auto;
+        display: none;
+        /* margin: auto;
         width: 90%;
         display: flex;
-        margin-bottom: 30px;
+        margin-bottom: 30px; */
     }
+    
+  #cardwraper{
+    margin: auto;
+    margin-top: 30px;
+    top: 0;
+    right: 80px;
+  }
   }

@@ -196,3 +196,120 @@ form > input{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: white;
 }
+.register-now{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.register-now > a > img{
+    width:100%;
+}
+.shopByRoom>h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Rooms{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.Rooms > div > a > img{
+  width: 100%;
+  border-radius: 3px;
+}
+.Rooms > div > a{
+    text-decoration: none;
+    color: black;
+}
+.fryDeals > h1{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 100px;
+}
+.fryDeals-cards{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.fryDeals-cards > div > a > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.fryDeals-cards > div > a{
+    text-decoration: none;
+    color: black;
+}
+#gray{
+    color: #888888;
+    font-size: 16px;
+}
+.inspire{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.inspire a{
+    text-decoration: none;
+}
+#orange{
+    color: #FF7035;
+    text-decoration: none;
+}
+.trends{
+    padding-left: 100px;
+    margin-top: 30px;
+}
+.trends-cards{
+    width: 100%;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.trends-cards > div > a > img{
+    width:100%;
+    border-radius: 3px;
+}
+.trends-cards > div > a{
+    text-decoration: none;
+    color: black;
+}
+.new-Arrivals{
+    margin-top: 30px;
+    padding-left: 100px;
+}
+.new-arrivals-cards{
+    width: 100%;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.new-arrivals-cards > div > a > img{
+    width:100%;
+    border-radius: 3px;
+}
+.new-arrivals-cards > div > a{
+    text-decoration: none;
+    color: black;
+}
+.getSpringReady > h1{
+    padding-left: 100px;
+    margin-top: 20px;
+}

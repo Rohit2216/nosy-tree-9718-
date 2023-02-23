@@ -313,3 +313,164 @@ form > input{
     padding-left: 100px;
     margin-top: 20px;
 }
+.getSpringReady-card{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.getSpringReady-card > div > a > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.top-brands > h1{
+    margin-top: 30px;
+    padding-left: 100px;
+}
+.brand-card{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    box-sizing: border-box; 
+}
+.brand-card > div > a > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.brand-card > div > a{
+    text-decoration: none;
+    color: black;
+}
+.inspirationFromBlog > h1{
+    margin-top: 30px;
+    padding-left: 100px;
+}
+.inspiration-card{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    box-sizing: border-box; 
+}
+.inspiration-card > div > a > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.inspiration-card > div > a{
+    text-decoration: none;
+}
+.customers-speak > h1{
+    margin-top: 30px;
+    padding-left: 100px;
+}
+.customers-card{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.customers-card > div > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.customers-card > div > p:nth-child(2){
+   font-size: 14px;
+   text-align:justify;
+   margin-bottom: 30px;
+}
+.customers-card > div > p:nth-child(3){
+    line-height: 0%;
+    font-size: 14px;
+}
+#gray-small{
+    color: #888888;
+    font-size: 14px;
+}
+.help > h1{
+    margin-top: 30px;
+    padding-left: 100px;
+}
+.help-card{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.help-card > div > a > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.help-card > div > a{
+    text-decoration: none;
+    color: black;
+}
+.help-card > div > a > p{
+    font-size: 14px;
+}
+.recently-viewed > h1{
+    margin-top: 30px;
+    padding-left: 100px;
+}
+.recently-viewed-card{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.recently-viewed-card > div > a > img{
+    width: 100%;
+    border-radius: 3px;
+}
+.recently-viewed-card > div > a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+#price{
+    color:#FF7035;
+}
+.footer{
+    width: 100%;
+    color: #F3F5F7;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.top{
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    gap: 20px;
+
+}
+.bottom{
+    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    gap: 20px;
+}
+.top > div >h3{
+    color: black;
+}
+.top > div > a > p{
+    color:  #888888;
+    text-decoration: none;
+    font-size: 14px;
+}
+.top > div > a{
+    text-decoration: none;
+}

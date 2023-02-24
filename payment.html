@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address/Payment </title>
+    <title>Pepperfry Address/Payment </title>
+    <link rel="website icon" type="png"
+     href="./images/wesiteIcon.jpeg">
     <link rel="stylesheet" href="src/payment.css">
 
 </head>
@@ -99,7 +101,14 @@
     
         </div>
 
-        <input type="submit" value="proceed to checkout" class="submit-btn">
+        <!-- <input type="submit" value="proceed to checkout" class="submit-btn"> -->
+        <button type="submit" class="btn" id="paymentSubmit">Placed order</button>
+            <div class="popup " id="popup">
+                <img src="./img/404-tick.png" alt="">
+            <h2>Thank You!</h2>
+            <p>Your order has been confirmed. Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+            </div>
 
     </form>
 

@@ -19,11 +19,12 @@ function localData(e){
 }
 
 
-let submitBtn = document.querySelector('.submit-btn');
+let submitBtn = document.getElementById('paymentSubmit');
 submitBtn.addEventListener('click', function(event) {
     event.preventDefault(); 
+    openPopup(event);
+    // alert("Order successfully placed"); 
     localData(event); 
-    alert("Order successfully placed"); 
 });
 
 
@@ -41,4 +42,18 @@ if (userData) {
     let expMonth = userData.expMonthInput;
     let expYear = userData.expYearInput;
     let cvv = userData.cvvInput;
+}
+
+
+
+function openPopup(event) {
+    // event.preventDefault();
+  let popup = document.querySelector('.popup');
+  popup.classList.add('open-popup');
+}
+
+function closePopup(event) {
+    // event.preventDefault();
+  let popup = document.querySelector('.popup');
+  popup.classList.remove('open-popup');
 }

@@ -54,7 +54,7 @@ body{
     
 }
 
-.nav-middle > div >img{
+.nav-middle > div > a > img{
     width:100%;
     height:75px;
 }
@@ -451,26 +451,74 @@ form > input{
     color: #F3F5F7;
     padding-left: 100px;
     padding-right: 100px;
+    box-sizing: border-box;
+    background-color: #F3F5F7;
 }
 .top{
     grid-template-columns: repeat(4,1fr);
     display: grid;
     gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
 
 }
 .bottom{
     grid-template-columns: repeat(3,1fr);
     display: grid;
     gap: 20px;
+    padding-bottom: 30px;
 }
 .top > div >h3{
     color: black;
+    font-size: 13px;
 }
 .top > div > a > p{
     color:  #888888;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
 }
 .top > div > a{
+    text-decoration: none;
+}
+.bottom > div >h3{
+    color: black;
+    font-size: 13px;
+}
+.bottom > div > a > p{
+    color:  #888888;
+    font-size: 13px;
+}
+.bottom > div > a{
+    text-decoration: none;
+}
+.accept{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.accept > div >h3{
+    color: black;
+    font-size: 14px;
+}
+.accept > div > a > img{
+   width:80%;
+}
+.ending{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.ending > div{
+    display: flex;
+    gap:20px;
+}
+.ending > div > a > p{
+   text-decoration: none;
+   color: #888888;
+   font-size: 14px;
+}
+.ending > div > a{
     text-decoration: none;
 }

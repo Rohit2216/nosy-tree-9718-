@@ -131,6 +131,54 @@ body{
     /* border: 5px solid white; */
     background-color: black;
   }
+  #emptyCart {
+    max-width: 400px;
+    margin: 60px auto;
+  }
+  #emptyCart > img {
+    width: 100%;
+  }
+  #emptyCart > h1 {
+    text-align: center;
+  }
+  #emptyCart > p {
+    text-align: center;
+    color: rgb(124, 124, 124);
+  }
+  #emptyCart > div {
+    width: 170px;
+    margin: 10px auto;
+  }
+  #emptyCart > div > button {
+    width: 100%;
+    padding: 8px 2px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(229, 57, 57);
+    border: 1px solid rgb(229, 57, 57);
+    cursor: pointer;
+  }
+  
+  #cart {
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #cartItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .remove_btn {
+    padding: 10px 15px;
+    font-size: 12px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+  }
   @media screen and (max-width:700px) {
     #mainpage{
         display: flex;

@@ -29,7 +29,7 @@ The Landing page of Pepperfry.com displays the navigation bar for products, Lear
 
 There have no account to first to create the acount. There be need to E-mail account  and the mobile no. also then set the strong password  and again re-enter the same password. then click the signup. they also redirect to  login page.
 
-![landing page](https://github.com/Rohit2216/gas-scarecrow-3264/blob/main/images/2023-01-28%20(4).png?raw=true "Logo Title Text 1")
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/day-5/img/signup.png?raw=true "Logo Title Text 1")
 
 
 ## Login Page
@@ -37,6 +37,6 @@ There have no account to first to create the acount. There be need to E-mail acc
 
 After the successful completion of the signup, your mobile number, username and password are stored in the local storage and you can log in with that credentials, if the mobile number and password are incorrect it will fail the validation and you cannot log in to the website.
 
-![landing page](https://github.com/Rohit2216/gas-scarecrow-3264/blob/main/images/2023-01-28%20(3).png?raw=true "Logo Title Text 1")
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/day-5/img/login.png?raw=true "Logo Title Text 1")
 
 

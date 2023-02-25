@@ -112,7 +112,7 @@ form > input{
    
 
 }
-.navbar-2 > a{
+.navbar-2 > div > a{
    text-decoration: none;
    color: black;
    font-size: 15px;
@@ -556,4 +556,225 @@ form > input{
 }
 .ending > div > a{
     text-decoration: none;
+}
+/* megaadropdown css */
+header{
+    width:100%;
+    box-sizing: border-box;
+}
+.container{
+    width:1300px;
+    /* width:100%; */
+    position: relative;
+    margin:auto;
+}
+nav>ul{
+   display:flex;
+}
+nav>ul>li{
+    padding:30px 20px;
+    list-style: none;
+}
+nav>ul>li a{
+    color:black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.megamenu{
+    position: absolute;
+    top:120%;
+    opacity: 0;
+    visibility: hidden;
+    flex-wrap: wrap;
+    width:100%;
+    transition:2s;
+    display: flex;
+    left:0px;
+    box-shadow:0px 10px 2px 3px lightslategray ;
+}
+.navbar-2 div:hover .megamenu{
+    opacity: 1;
+    top:100%;
+    visibility: visible;
+    background-color: #F5F5F5;
+}
+.megamenuitems{
+    flex-basis: 10%;
+    height: auto;
+    margin:0.5%;
+}
+
+.megamenuitems h4{
+    font-size: 13px;
+}
+.megamenuitems h4:hover{
+    color: #FF7035;
+    cursor: pointer;
+}
+.megamenuitems p{
+    font-size: 13px;
+    text-align: left;
+}
+.megamenuitems p:hover{
+    color: #FF7035;
+    cursor: pointer;
+}
+.megamenuitems img{
+    width:100%;
+    margin-top: 15px;
+}
+
+/* media queries */
+
+@media screen and (min-width:500px) and (max-width:1000px){
+    header{
+        display: none;
+    }
+    .main{
+        width: 100%;
+        height:500px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        box-sizing: border-box; 
+    }
+    .Rooms{
+        width: 100%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(2,1fr);
+        box-sizing: border-box;
+        gap:10px;
+}
+.fryDeals-cards{
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.trends-cards{
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+.new-arrivals-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.getSpringReady-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.brand-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    box-sizing: border-box; 
+}
+.inspiration-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    box-sizing: border-box; 
+}
+.customers-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.help-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+}
+@media screen and (min-width:100px) and (max-width:500px){
+    header{
+        display: none;
+    }
+    .main{
+        width: 100%;
+        height:500px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        box-sizing: border-box; 
+    }
+    .Rooms{
+        width: 100%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+}
+.fryDeals-cards{
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(1,1fr);
+}
+.trends-cards{
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(1,1fr);
+}
+.new-arrivals-cards{
+    width: 100%;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    box-sizing: border-box;
+    gap:10px;
+}
+.getSpringReady-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.brand-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:10px;
+    box-sizing: border-box; 
+}
+.inspiration-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:10px;
+    box-sizing: border-box; 
+}
+.customers-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
+.help-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    box-sizing: border-box;
+}
 }

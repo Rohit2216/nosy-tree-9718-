@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin Page</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+<div id="mainpage">
+    <div id="filter">
+      <h3>Add Product</h4>
+      <!-- <input type="text" id="id" placeholder="id"><br> -->
+      <input type="text" id="Name" class="inputfeild" placeholder="Name of Product">
+      <input type="text" id="category" class="inputfeild" placeholder="Product category">
+      <input type="text" id="img" class="inputfeild"placeholder="Image URL">
+      <input type="number" id="price" class="inputfeild" placeholder="Product Price">
+      <input type="number" id="discount" class="inputfeild" placeholder="Add discount">
+      <button id="Addbtn" class="crudbtn">Add Product</button> 
+        <hr>
+        <h3>Update Product</h3>
+       <input type="text" id="ID" class="inputfeild" placeholder="Product ID">
+       <input type="text" id="UpdateName" class="inputfeild" placeholder="Update Name"> 
+       <input type="text" id="Updatecategory" class="inputfeild" placeholder="Update category">
+        <input type="text" id="updateImg" class="inputfeild" placeholder="Update Image URL">
+        <input type="number" id="UpdatePrice" class="inputfeild" placeholder="Update Price">
+        <input type="number" id="updateDisc" class="inputfeild" placeholder="Update Discount">
+        <button id="Updatebtn" class="crudbtn">Update Product</button>
+        <hr> 
+        <a href="./card.html">Cart</a>
+       </div>
+       <div id="cardwraper">
+        
+            <!-- product should append here -->
+        </div>
+        
+        
+        
+</div>
+  
+</body>
+<script>
+   let api=`https://63f5b30259c944921f64b2be.mockapi.io/products`
+let name=document.getElementById("Name");
+let category=document.getElementById("category");
+let img=document.getElementById("img");
+let price=document.getElementById("price");
+let discount=document.getElementById("discount");
+let addproduct=document.getElementById("Addbtn")
+addproduct.addEventListener("click",(e)=>{
+  addData()
+})
+async function addData(){
+    try {
+        let obj={
+          name:name.value,
+          category:category.value,
+          img:img.value,
+          price:price.value,
+          discount:discount.value
+
+        }
+        let res= await fetch("https://63f5b30259c944921f64b2be.mockapi.io/products",{
+            method:"POST",
+            headers:{
+              'Content-Type' : 'application/json'
+            },
+            body:JSON.stringify(obj)
+        })
+        fetched()
+    } catch (error) {
+        console.log(error)
+    }
+}
+let updateId=document.getElementById("ID");
+let updatName=document.getElementById("UpdateName");
+let updateCategory=document.getElementById("Updatecategory");
+let updateImg=document.getElementById("updateImg")
+let updatePrice=document.getElementById("UpdatePrice");
+let updateDisc=document.getElementById("updateDisc");
+let updatebtn=document.getElementById("Updatebtn");
+updatebtn.addEventListener("click",()=>{
+    UpdateData()
+})
+async function UpdateData(){
+    try {
+        let obj={
+            id:updateId.value,
+            name:updatName.value,
+            category:updateCategory.value,
+            img:updateImg.value,
+            price:updatePrice.value,
+            discount:updateDisc.value
+        }
+        let res= await fetch(`${api}/${updateId.value}`,{
+            method:"PUT",
+            headers:{
+              'Content-Type' : 'application/json' 
+            },
+            body:JSON.stringify(obj)
+        })
+        fetched()
+    } catch (error) {
+        console.log(error);
+    }
+}
+  fetched()
+
+
+   let main=document.getElementById("cardwraper")
+   async function fetched (){
+      try {
+        let req= await fetch(`${api}`);
+        let res= await req.json();
+        console.log(res)
+        display(res);
+        // console.log(res)
+      } catch (error) {
+        console.log(error)
+      }
+   }
+   
+  function display(data){
+    let carditem=`
+    <div id="product">
+      ${data.
+        map((ele)=>
+        getcard(
+          ele.id,
+          ele.img,
+          ele.name,
+          ele.category,
+          ele.price,
+          ele.discount
+        )
+     
+      )
+    .join("")}
+    
+  </div>`
+    main.innerHTML=carditem;
+    
+    addtoCard()
+  }
+ function getcard(id,img,name,category,price,discount){
+  card=`
+<div class="card" >
+  <div class="container" data-id=${id}>
+  <img src=${img} alt="" />
+</div>
+ <div class="info">
+   <h4>${name}</h4>
+   <p>Id:- ${id}</p>
+   <p class="category">${category}</p>
+    <p class="price">₹ ${price}</p>
+  <p class="discount"> ${discount}% Off</p>
+  <button class="delete"  data-id=${id} >Delete</button>
+ </div>
+</div>`
+ return card;
+ }
+
+
+ function addtoCard(){
+  let btn=document.querySelectorAll(".delete");
+ 
+ 
+  for(let link of btn){
+    link.addEventListener("click",edit)
+  }
+  
+    function edit(e){
+    e.preventDefault()
+    let iD=e.target.dataset.id
+    try {
+        let res= fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${iD}`,{
+        method:"DELETE",
+        headers:{
+            'Content-Type' : 'application/json' 
+        },
+        body:JSON.stringify({id:iD})
+      })
+       fetched() 
+    } catch (error) {
+        console.log(error)
+    }
+      
+      
+       
+    }
+    
+    
+}
+
+</script>
+</html>

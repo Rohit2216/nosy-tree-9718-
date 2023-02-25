@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+ 
 <div id="mainpage">
     <div id="filter">
       <h3>Sort by</h4>
@@ -34,8 +35,10 @@
         <input type="radio" id="DreamzzFurniture" name="brand" value="Dreamzz_Furniture">
         <label for="Dreamzz_Furniture">Dreamz Furniture</label><br><br>
         <hr> 
+        <a href="./card.html">Cart</a>
        </div>
        <div id="cardwraper">
+        
             <!-- product should append here -->
         </div>
         
@@ -206,20 +209,34 @@ const data=JSON.parse(localStorage.getItem("cart"))||[];
       })
       .then((ele)=>{
         let obj={}
-        
+        obj.quantity=1;
         obj.name=ele.name,
         obj.category=ele.category,
         obj.img=ele.img,
         obj.price=ele.price,
         obj.discount=ele.discount,
         obj.id=ele.id
-        data.push(obj)
-        localStorage.setItem("cart",JSON.stringify(data))
+        if(checkduplicate(obj)){
+          data.push(obj)
+          localStorage.setItem("cart",JSON.stringify(data))
+            alert("Product added in cart")
+        }else{
+          alert("Product already in cart")
+        }
+        
       }) 
        
     }
     
     
+}
+function checkduplicate(ele){
+  for(let i=0; i<data.length; i++){
+    if(data[i].name===ele.name){
+      return false
+    }
+  }
+  return true
 }
 </script>
 </html>

@@ -158,11 +158,29 @@ body{
     border: 1px solid rgb(229, 57, 57);
     cursor: pointer;
   }
+  #emptyCart> div > button>a{
+    text-decoration: none;
+    color: white;
+  }
   
   #cart {
     padding: 20px 0px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+   
+  }
+  #cart>div{
+    width: 70%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #cart>div>img{
+    width: 200px;
+    height: 200px;
   }
   
   #cartItem {
@@ -171,13 +189,74 @@ body{
     justify-content: center;
     align-items: center;
   }
-  .remove_btn {
-    padding: 10px 15px;
-    font-size: 12px;
-    border: none;
-    background-color: red;
+  .qunt{
+    display: block;
+    width: 45px;
+    height: 30Px;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: large;
+
+  }
+  .qunt:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: black;
+  }
+  #qunt{
+    display: flex;
+    width: 120px;
+    height: 60px;
+   justify-content: space-between;
+   align-items: center;
+  }
+  #buy{
+    background-color: rgb(243, 109, 60);
     color: white;
-    border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 3px;
+  }
+  #buy:hover{
+    cursor: pointer;
+    background-color: black;
+    color:#fff;
+    border: 2px solid black;
+  }
+  #remove{
+   display: block;
+   background-color:red;
+   border: none;
+   color:white;
+   height:25px;
+   width: 25px;
+  }
+  #remove:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    color: red;
+  }
+  #removebtn{
+    margin-right: 0px;
+    
+    height: 200px;
+  }
+  .inputfeild{
+   display: block;
+   margin-bottom: 10px;
+   width: 90%;
+   height: 20px;
+  }
+  .crudbtn{
+    display: block;
+    background-color: skyblue;
+    border: none;
+    height: 30px;
+    width: 95%;
+    cursor: pointer;
+    color: white;
   }
   @media screen and (max-width:700px) {
     #mainpage{

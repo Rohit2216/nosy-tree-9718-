@@ -22,5 +22,5 @@ loginBtn.addEventListener('click', (e) => {
 let bar = document.getElementById('timeBar');
 
 bar.addEventListener('click', function () {
-    window.location.href = 'h.html'
+    window.location.href = 'index.html'
 })

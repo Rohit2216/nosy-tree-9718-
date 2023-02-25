@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+<div id="mainpage">
+    <div id="filter">
+      <h3>Sort by</h4>
+      <input type="radio" id="desc" name="Sort" value="desc">
+      <label for="desc">High to low</label><br>
+      <input type="radio" id="asc" name="Sort" value="asc">
+      <label for="asc">Low to High</label><br>
+      <input type="radio" id="Normal" name="Sort" value="Normal">
+      <label for="Normal">Normal</label><br>
+      <br> 
+        <hr>
+        <h3>Brand</h3>
+        <input type="radio" id="CasaCraft" name="brand" value="CasaCraft">
+        <label for="CasaCraft">CasaCraft </label><br>
+        <input type="radio" id="ARRA" name="brand" value="ARRA">
+        <label for="ARRA">ARRA</label><br>  
+        <input type="radio" id="Chumbak" name="brand" value="Chumbak">
+        <label for="Chumbak">Chumbak</label><br>
+        <input type="radio" id="Woodsworth" name="brand" value="Woodsworth">
+        <label for="Woodsworth">Woodsworth</label><br>
+        <input type="radio" id="DreamzzFurniture" name="brand" value="Dreamzz_Furniture">
+        <label for="Dreamzz_Furniture">Dreamz Furniture</label><br><br>
+        <hr> 
+        <a href="./card.html">Cart</a>
+       </div>
+       <div id="cardwraper">
+        
+            <!-- product should append here -->
+        </div>
+        
+        
+        
+</div>
+<div id="pagination">
+  <!-- all button of pagination -->
+</div>
+  
+</body>
+<script>
+   let api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+   let btns=0;
+
+async function countData(api){
+  let res = await fetch(`${api}`)
+  let data = await res.json()
+  btns=Math.ceil(data.length/12);
+  paginationButton(btns)
+  
+}
+// sortBy=price&order=asc forsorting
+const radioInputs = document.querySelectorAll('input[name="Sort"]');
+  radioInputs.forEach(radioInput => {
+    radioInput.addEventListener('change', function () {
+      // let api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+         if(this.value==="desc"){
+          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          api=`${api}sortBy=price&order=desc`
+          countData(api)
+          fetched(1,api)
+         }else if(this.value==="asc"){
+          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          api=`${api}sortBy=price&order=asc`
+          fetched(1,api)
+          countData(api)
+         }else{
+          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          fetched(1,api)
+          countData(api)
+         }
+    });
+  })
+  const radioa = document.querySelectorAll('input[name="brand"]');
+  radioa.forEach(radio => {
+    radio.addEventListener('change', function() {
+      let data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+         if(this.value==="CasaCraft"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+           data=`${data}category=CasaCraft`
+          fetched(1,data)
+          countData(data)
+         }else if(this.value==="ARRA"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=ARRA`
+          fetched(1,data)
+          countData(data)
+          
+         }else if(this.value==="Chumbak"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=Chumbak`
+          fetched(1,data)
+          countData(data)
+          
+         }else if(this.value==="Woodsworth"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=Woodsworth`
+          fetched(1,data)
+          countData(data)
+          
+         }else if(this.value==="Dreamzz_Furniture"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=Dreamzz%20Furniture`
+          fetched(1,data)
+          countData(data)
+         }
+    });
+  })
+   countData(api)
+window.addEventListener("load",()=>{
+  
+  fetched(1,api)
+})
+
+   let main=document.getElementById("cardwraper")
+   async function fetched (page=1,api){
+      try {
+        let req= await fetch(`${api}&page=${page}&limit=12`);
+        let res= await req.json();
+
+        display(res);
+        // console.log(res)
+      } catch (error) {
+        console.log(error)
+      }
+   }
+   
+   let pagebtn=document.getElementById("pagination")
+   function paginationButton(page){
+    let btn=[];
+    for(let i=1; i<=page; i++){
+      btn.push(`<button class="paginationBtn" data-page-number=${i}>${i}</button>`)
+    }
+    pagebtn.innerHTML=btn.join("");
+    const allButton=document.querySelectorAll("#pagination")
+    for( let btn of allButton){
+      btn.addEventListener("click",(e)=>{
+        e.preventDefault()
+        fetched(e.target.dataset.pageNumber,api)
+      })
+    }
+   }
+  function display(data){
+    let carditem=`
+    <div id="product">
+      ${data.
+        map((ele)=>
+        getcard(
+          ele.id,
+          ele.img,
+          ele.name,
+          ele.category,
+          ele.price,
+          ele.discount
+        )
+     
+      )
+    .join("")}
+    
+  </div>`
+    main.innerHTML=carditem;
+    
+    addtoCard()
+  }
+ function getcard(id,img,name,category,price,discount){
+  card=`
+<div class="card" >
+  <div class="container" data-id=${id}>
+  <img src=${img} alt="" />
+  <div class="overlay"></div>
+   <div data-id=${id} class="button"><a href="#" data-id=${id} class="btn">Add to Cart</a></div>
+ </div>
+ <div class="info">
+   <h4>${name}</h4>
+   <p class="category">${category}</p>
+    <p class="price">₹ ${price}</p>
+  <p class="discount"> ${discount}% Off</p>
+ </div>
+</div>`
+ return card;
+ }
+const data=JSON.parse(localStorage.getItem("cart"))||[];
+ function addtoCard(){
+  let btn=document.querySelectorAll(".button");
+ 
+ 
+  for(let link of btn){
+    link.addEventListener("click",edit)
+  }
+  
+    function edit(e){
+    e.preventDefault()
+    let id=e.target.dataset.id
+      let res= fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
+      res.then((data)=>{
+        return data.json()
+      })
+      .then((ele)=>{
+        let obj={}
+        obj.quantity=1;
+        obj.name=ele.name,
+        obj.category=ele.category,
+        obj.img=ele.img,
+        obj.price=ele.price,
+        obj.discount=ele.discount,
+        obj.id=ele.id
+        if(checkduplicate(obj)){
+          data.push(obj)
+          localStorage.setItem("cart",JSON.stringify(data))
+            alert("Product added in cart")
+        }else{
+          alert("Product already in cart")
+        }
+        
+      }) 
+       
+    }
+    
+    
+}
+function checkduplicate(ele){
+  for(let i=0; i<data.length; i++){
+    if(data[i].name===ele.name){
+      return false
+    }
+  }
+  return true
+}
+</script>
+</html>

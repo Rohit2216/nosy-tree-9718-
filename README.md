@@ -40,3 +40,12 @@ After the successful completion of the signup, your mobile number, username and 
 ![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/day-5/img/login.png?raw=true "Logo Title Text 1")
 
 
+
+## Footer Page
+------
+
+this is the footer part of my website. There have some data to  our site what's their office and what's contact no. and connect to E-mail id. also.
+
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/day-5/img/footer.png?raw=true  "Logo Title Text 1")
+
+

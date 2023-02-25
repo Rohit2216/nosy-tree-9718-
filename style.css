@@ -112,7 +112,7 @@ form > input{
    
 
 }
-.navbar-2 > a{
+.navbar-2 > div > a{
    text-decoration: none;
    color: black;
    font-size: 15px;
@@ -556,4 +556,69 @@ form > input{
 }
 .ending > div > a{
     text-decoration: none;
+}
+/* megaadropdown css */
+header{
+    width:100%;
+    box-sizing: border-box;
+}
+.container{
+    width:1300px;
+    /* width:100%; */
+    position: relative;
+    margin:auto;
+}
+nav>ul{
+   display:flex;
+}
+nav>ul>li{
+    padding:30px 20px;
+    list-style: none;
+}
+nav>ul>li a{
+    color:black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.megamenu{
+    position: absolute;
+    top:120%;
+    opacity: 0;
+    visibility: hidden;
+    flex-wrap: wrap;
+    width:100%;
+    transition:2s;
+    display: flex;
+    left:0px;
+    box-shadow:0px 10px 2px 3px lightslategray ;
+}
+.navbar-2 div:hover .megamenu{
+    opacity: 1;
+    top:100%;
+    visibility: visible;
+    background-color: #F5F5F5;
+}
+.megamenuitems{
+    flex-basis: 10%;
+    height: auto;
+    /* margin: 1%; */
+   margin:7px;
+}
+
+.megamenuitems h4{
+    /* padding: 10px; */
+    /* background-color:lightgrey; */
+    font-size: 13px;
+}
+.megamenuitems h4:hover{
+    color: #FF7035;
+    cursor: pointer;
+}
+.megamenuitems p{
+    font-size: 13px;
+    text-align: left;
+}
+.megamenuitems p:hover{
+    color: #FF7035;
+    cursor: pointer;
 }

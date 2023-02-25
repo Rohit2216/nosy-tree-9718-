@@ -5,7 +5,7 @@ Hello, I am Rohit Chauhan. In this blog, I am writing about our project cloaning
 ## About Pepperfry
 Pepperfry is an Indian online marketplace for furniture and home décor.
 
-#$ Team
+# Team
 We are five members in our team Sayali Jadhav, Kishor Kamble, Yogesh Singh, Navneet Srivastav and me. We divided website in parts and assigned work to every member by understanding the strength of each team member. We have completed this project in a four days and this is possible because of our hardworking team members.
 
 ## Tech Stack which we used

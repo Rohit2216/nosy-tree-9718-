@@ -2,7 +2,7 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 #filter{
-    
+    margin-top: 200px;
     width: 16%;
     position: fixed;
     top: 0;
@@ -84,6 +84,7 @@ body{
   }
   #mainpage{
     display: flex;
+    /* margin-top:1000px; */
    
   
   }
@@ -278,6 +279,7 @@ body{
         width: 90%;
         display: flex;
         margin-bottom: 30px; */
+        /* margin-top:10px; */
     }
     
   #cardwraper{
@@ -287,3 +289,219 @@ body{
     right: 80px;
   }
   }
+
+
+  .nav-middle{
+    width:100%;
+    height: 80px;
+    display:flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* position:fixed; */
+   
+
+    
+}
+
+.nav-middle > div > a > img{
+    width:100%;
+    height:75px;
+   
+
+}
+
+form{
+   height:40px;
+   display: flex;
+   align-items: center;
+   background-color: #F5F5F5;
+  
+
+}
+form > input{
+  width: 800px;
+  border: none;
+  font-size: 17px;
+  background-color: #F5F5F5;
+ 
+
+}
+#images img{
+   width:30px;
+   height:30px;
+   margin-right: 10px;
+  
+
+  
+}
+
+form img{
+  width:20px;
+  height:20px;
+}
+
+
+#nav-left{
+  display:flex;
+  gap:20px;
+  margin-left: 20px;
+  font-size: 15px;
+ 
+}
+#nav-left a:hover{
+  color: red;
+  cursor: pointer;
+ 
+
+}
+#nav-right{
+  display:flex;
+  gap:20px;
+  margin-right: 20px;
+  font-size: 14px;
+ 
+
+}
+.navbar-1{
+  width:100%;
+  height: 40px;
+  display:flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+ 
+
+}
+.navbar-1 a{
+  color:#362712;
+  text-decoration: none;
+ 
+
+}
+#nav-right a:nth-child(2){
+  color: #FF775A;
+  text-decoration: underline;
+ 
+
+}
+#edit{
+  width:17px;
+  height:17px;
+ 
+
+}
+
+
+.navbar-2{
+  width:100%;
+  height:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #F5F5F5;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+ 
+
+}
+.navbar-2 > a{
+ text-decoration: none;
+ color: black;
+ font-size: 15px;
+}
+
+
+.footer{
+  width: 80%;
+  color: #F3F5F7;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  background-color: #F3F5F7;
+  margin-left:230px;
+}
+.top{
+  grid-template-columns: repeat(4,1fr);
+  display: grid;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+}
+.bottom{
+  grid-template-columns: repeat(3,1fr);
+  display: grid;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+.top > div >h3{
+  color: black;
+  font-size: 13px;
+}
+.top > div > a > p{
+  color:  #888888;
+  text-decoration: none;
+  font-size: 13px;
+}
+.top > div > a{
+  text-decoration: none;
+}
+
+.top > div:nth-child(4) > a > img{
+  width:100%;
+  height:200px;
+}
+.bottom > div >h3{
+  color: black;
+  font-size: 13px;
+}
+.bottom > div > a > p{
+  color:  #888888;
+  font-size: 13px;
+}
+.bottom > div > a{
+  text-decoration: none;
+}
+.accept{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.accept > div >h3{
+  color: black;
+  font-size: 14px;
+}
+.accept > div > a > img{
+ width:100%;
+ height:70px;
+}
+.ending{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+.ending > div{
+  display: flex;
+  gap:20px;
+}
+.ending > div > a > p{
+ text-decoration: none;
+ color: #888888;
+ font-size: 14px;
+}
+.ending > div > a{
+  text-decoration: none;
+}
+
+#accepting{
+  width: 90%;
+  height:100px;
+}

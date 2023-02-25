@@ -1,181 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="product.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
- 
-<div id="mainpage">
+  <div class="navbar-1">
+    <div id="nav-left">
+     <a href="#">Sell on Pepperfry</a>   
+     <a href="#">Become a Franchisee</a>
+     <a href="#">Buy in Bulk</a>
+     <a href="#">Find a Studio</a>
+    </div>
+    <div href="#" id="nav-right">
+     <a href="#">Enter pincode
+         <img id="edit" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/external-edit-basic-ui-anggara-basic-outline-anggara-putra.png" alt="">
+     </a>
+     <a href="#">Find Pepperfry Studio</a>
+    </div>
+ </div>
+
+  <div class="nav-middle">
+    <div>
+      <a href="./index.html">
+        <img src="./images/logo new.png" alt="error">
+      </a>
+    </div>
+    <div>
+      <form>
+        <input type="text" placeholder="Your door to happiness opens with a search" id="search">
+        <img src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="error">
+      </form>
+    </div>
+    <div id="images">
+      <a href="#"><img
+          src="https://img.icons8.com/external-vectorslab-flat-vectorslab/53/external-Help-Chat-customer-support-vectorslab-flat-vectorslab-2.png"
+          alt="error"></a>
+      <a href="./login.html"><img src="https://img.icons8.com/material-sharp/256/user.png" alt="error"></a>
+      <a href="#"><img src="https://img.icons8.com/ios/256/like.png" alt="error"></a>
+      <a href="#"><img
+          src="https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/256/external-Add-To-Cart-mobile-shopping-smashingstocks-detailed-outline-smashing-stocks-4.png"
+          alt="error"></a>
+    </div>
+  </div>
+
+  <div class="navbar-2">
+    <a href="#">Furniture</a>
+    <a href="#">Home Decor</a>
+    <a href="#">Lamps & Lighting</a>
+    <a href="#">Kitchen & Dining</a>
+    <a href="#">Furnishings</a>
+    <a href="#">Mattresses</a>
+    <a href="#">Appliances</a>
+    <a href="#">Pets</a>
+    <a href="#">Modular</a>
+    <a href="#">Gift Cards</a>
+</div>
+<br><br><br>
+  <div id="mainpage">
     <div id="filter">
       <h3>Sort by</h4>
-      <input type="radio" id="desc" name="Sort" value="desc">
-      <label for="desc">High to low</label><br>
-      <input type="radio" id="asc" name="Sort" value="asc">
-      <label for="asc">Low to High</label><br>
-      <input type="radio" id="Normal" name="Sort" value="Normal">
-      <label for="Normal">Normal</label><br>
-      <br> 
+        <input type="radio" id="desc" name="Sort" value="desc">
+        <label for="desc">High to low</label><br>
+        <input type="radio" id="asc" name="Sort" value="asc">
+        <label for="asc">Low to High</label><br>
+        <input type="radio" id="Normal" name="Sort" value="Normal">
+        <label for="Normal">Normal</label><br>
+        <br>
         <hr>
         <h3>Brand</h3>
         <input type="radio" id="CasaCraft" name="brand" value="CasaCraft">
         <label for="CasaCraft">CasaCraft </label><br>
         <input type="radio" id="ARRA" name="brand" value="ARRA">
-        <label for="ARRA">ARRA</label><br>  
+        <label for="ARRA">ARRA</label><br>
         <input type="radio" id="Chumbak" name="brand" value="Chumbak">
         <label for="Chumbak">Chumbak</label><br>
         <input type="radio" id="Woodsworth" name="brand" value="Woodsworth">
         <label for="Woodsworth">Woodsworth</label><br>
         <input type="radio" id="DreamzzFurniture" name="brand" value="Dreamzz_Furniture">
         <label for="Dreamzz_Furniture">Dreamz Furniture</label><br><br>
-        <hr> 
-        <a href="./card.html">Cart</a>
-       </div>
-       <div id="cardwraper">
-        
-            <!-- product should append here -->
+        <hr>
+    </div>
+    <div id="cardwraper">
+      <!-- product should append here -->
+    </div>
+
+
+
+  </div>
+  <div id="pagination">
+    <!-- all button of pagination -->
+  </div>
+  <br><br><br><br><br>
+  <div class="footer">
+    <div class="top">
+        <div>
+            <h3>Useful Links</h3>
+            <a href="#"><p>About Us</p></a>
+            <a href="#"><p>Our Blog</p></a>
+            <a href="#"><p>Careers</p></a>
+            <a href="#"><p>Corporate Governance</p></a>
+            <a href="#"><p>Pepperfry In the News</p></a>
+            <a href="#"><p>Find A Studio</p></a>
+            <a href="#"><p>Gift Cards</p></a>
+            <a href="#"><p>Brands</p></a>
+            <a href="#"><p>Customer Reviews</p></a>
         </div>
-        
-        
-        
+        <div>
+            <h3>Partners</h3>
+            <a href="#"><p>Sell With Us</p></a>
+            <a href="#"><p>Become a Franchisee</p></a>
+            <a href="#"><p>Become a Pep Homie</p></a>
+            <a href="#"><p>Design For Us</p></a>
+            <a href="#"><p>Pepperfry Marketplace Policies</p></a>
+            <a href="#"><p>Login to Your Merchant Dashboard</p></a>
+            <a href="#"><p>Important : GST and You</p></a>
+            <a href="#"><p>Corporate Enquiries</p></a>
+        </div>
+        <div>
+            <h3>Need Help?</h3>
+            <a href="#"><p>Contact Us</p></a>
+            <a href="#"><p>Returns & Refund</p></a>
+            <a href="#"><p>Track Your Order</p></a>
+            <a href="#"><p>FAQs</p></a>
+            <a href="#"><p>Buy on Phone</p></a>
+        </div>
+        <div>
+          <a href="https://play.google.com/store/apps/details?id=com.app.pepperfry&pli=1"><img src="./images/downloadApp.jpg" alt="error"></a>  
+          
+        </div>
+    </div>
+    <div class="bottom">
+        <div>
+            <h3>Popular Categories</h3>
+            <a href="#">
+            <p>Queen Size Beds, King Size Beds, Coffee Tables, Dining Sets, Recliners, Sofa cum Beds, Rocking Chairs, Cabinets, Book Shelves, TV Unit, Wardrobes, Outdoor Furniture, Bar Cabinets, Wall Shelves, Photo Frames, Bed Sheets, Mattresses, Table Cloth, Living Room Furniture, Study Tables, Dining Room Furniture, Office Furniture, Bed Room Furniture, Dining Table, Beds, Sofas, Sofa Set, Trundle Bed</p>
+            </a>
+        </div>
+        <div>
+            <h3>Popular Brands</h3>
+            <a href="#">
+            <p>Mintwud, Woodsworth, CasaCraft, Amberville, Mudramark, Bohemiana, Clouddio, Spacewood, Durian, Green Soul, Godrej Interio, Nilkamal, Orange Tree , HomeTown , Duroflex , Sleepyhead , Peps India , NestAsia , Jaipur Rugs , Obettee , Eliante by Jainsons , @Home, Kapoor E Illuminaton , Ellementry , Chumbak , Philips , Jaipur Fabric , Maspar , India Circus by Krsnaa Mehta</p>
+            </a>
+        </div>
+        <div>
+            <h3>Cities we deliver to</h3>
+            <a href="#">
+            <p>Bengaluru, Mumbai, Navi Mumbai, Delhi, Hyderabad, Pune, Chennai, Gurgaon, Kolkata, Noida, Goa, Ghaziabad, Ahmedabad, Coimbatore, Faridabad, Jaipur, Lucknow, Kochi, Visakhapatnam, Chandigarh, Vadodara, Nagpur, Thiruvananthapuram, Indore, Mysore, Bhopal, Surat, Jalandhar, Patna, Ludhiana, Nashik, Madurai, Kanpur, Aurangabad and many more</p>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="accept">
+        <div>
+        <h3>We accept</h3>
+        <a href="#">
+        <img id="accepting" src="./images/cards.jpg" alt="error">
+        </a>
+        </div>
+        <div>
+            <h3>Like what you see? You'll like us even more here</h3>
+            <a href="#">
+            <img id="accepting"  src="./images/apps.jpg" alt="error">
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="ending">
+        <div>
+            
+            <a href="#"><p>Buy In Bulk</p></a>
+            <a href="#"><p>Write A Testimonial</p></a>
+        </div>
+        <div>
+            <a href="#"><p>Whitehat</p></a>
+            <a href="#"><p>Site Map</p></a>
+            <a href="#"><p>Terms Of Use</p></a>
+            <a href="#"><p>Privacy Policy</p></a>
+            <a href="#"><p>Your Data & Security</p></a>
+            <a href="#"><p>Grievance Redressal</p></a>
+        </div>
+    </div>
 </div>
-<div id="pagination">
-  <!-- all button of pagination -->
-</div>
-  
+
+
 </body>
 <script>
-   let api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-   let btns=0;
+  let api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+  let btns = 0;
 
-async function countData(api){
-  let res = await fetch(`${api}`)
-  let data = await res.json()
-  btns=Math.ceil(data.length/12);
-  paginationButton(btns)
-  
-}
-// sortBy=price&order=asc forsorting
-const radioInputs = document.querySelectorAll('input[name="Sort"]');
+  async function countData(api) {
+    let res = await fetch(`${api}`)
+    let data = await res.json()
+    btns = Math.ceil(data.length / 12);
+    paginationButton(btns)
+
+  }
+  // sortBy=price&order=asc forsorting
+  const radioInputs = document.querySelectorAll('input[name="Sort"]');
   radioInputs.forEach(radioInput => {
     radioInput.addEventListener('change', function () {
       // let api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-         if(this.value==="desc"){
-          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          api=`${api}sortBy=price&order=desc`
-          countData(api)
-          fetched(1,api)
-         }else if(this.value==="asc"){
-          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          api=`${api}sortBy=price&order=asc`
-          fetched(1,api)
-          countData(api)
-         }else{
-          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          fetched(1,api)
-          countData(api)
-         }
+      if (this.value === "desc") {
+        api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        api = `${api}sortBy=price&order=desc`
+        countData(api)
+        fetched(1, api)
+      } else if (this.value === "asc") {
+        api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        api = `${api}sortBy=price&order=asc`
+        fetched(1, api)
+        countData(api)
+      } else {
+        api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        fetched(1, api)
+        countData(api)
+      }
     });
   })
   const radioa = document.querySelectorAll('input[name="brand"]');
   radioa.forEach(radio => {
-    radio.addEventListener('change', function() {
-      let data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-         if(this.value==="CasaCraft"){
-          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-           data=`${data}category=CasaCraft`
-          fetched(1,data)
-          countData(data)
-         }else if(this.value==="ARRA"){
-          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          data=`${data}category=ARRA`
-          fetched(1,data)
-          countData(data)
-          
-         }else if(this.value==="Chumbak"){
-          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          data=`${data}category=Chumbak`
-          fetched(1,data)
-          countData(data)
-          
-         }else if(this.value==="Woodsworth"){
-          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          data=`${data}category=Woodsworth`
-          fetched(1,data)
-          countData(data)
-          
-         }else if(this.value==="Dreamzz_Furniture"){
-          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-          data=`${data}category=Dreamzz%20Furniture`
-          fetched(1,data)
-          countData(data)
-         }
+    radio.addEventListener('change', function () {
+      let data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+      if (this.value === "CasaCraft") {
+        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        data = `${data}category=CasaCraft`
+        fetched(1, data)
+        countData(data)
+      } else if (this.value === "ARRA") {
+        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        data = `${data}category=ARRA`
+        fetched(1, data)
+        countData(data)
+
+      } else if (this.value === "Chumbak") {
+        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        data = `${data}category=Chumbak`
+        fetched(1, data)
+        countData(data)
+
+      } else if (this.value === "Woodsworth") {
+        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        data = `${data}category=Woodsworth`
+        fetched(1, data)
+        countData(data)
+
+      } else if (this.value === "Dreamzz_Furniture") {
+        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
+        data = `${data}category=Dreamzz%20Furniture`
+        fetched(1, data)
+        countData(data)
+      }
     });
   })
-   countData(api)
-window.addEventListener("load",()=>{
-  
-  fetched(1,api)
-})
+  countData(api)
+  window.addEventListener("load", () => {
 
-   let main=document.getElementById("cardwraper")
-   async function fetched (page=1,api){
-      try {
-        let req= await fetch(`${api}&page=${page}&limit=12`);
-        let res= await req.json();
+    fetched(1, api)
+  })
 
-        display(res);
-        // console.log(res)
-      } catch (error) {
-        console.log(error)
-      }
-   }
-   
-   let pagebtn=document.getElementById("pagination")
-   function paginationButton(page){
-    let btn=[];
-    for(let i=1; i<=page; i++){
+  let main = document.getElementById("cardwraper")
+  async function fetched(page = 1, api) {
+    try {
+      let req = await fetch(`${api}&page=${page}&limit=12`);
+      let res = await req.json();
+
+      display(res);
+      // console.log(res)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  let pagebtn = document.getElementById("pagination")
+  function paginationButton(page) {
+    let btn = [];
+    for (let i = 1; i <= page; i++) {
       btn.push(`<button class="paginationBtn" data-page-number=${i}>${i}</button>`)
     }
-    pagebtn.innerHTML=btn.join("");
-    const allButton=document.querySelectorAll("#pagination")
-    for( let btn of allButton){
-      btn.addEventListener("click",(e)=>{
+    pagebtn.innerHTML = btn.join("");
+    const allButton = document.querySelectorAll("#pagination")
+    for (let btn of allButton) {
+      btn.addEventListener("click", (e) => {
         e.preventDefault()
-        fetched(e.target.dataset.pageNumber,api)
+        fetched(e.target.dataset.pageNumber, api)
       })
     }
-   }
-  function display(data){
-    let carditem=`
+  }
+  function display(data) {
+    let carditem = `
     <div id="product">
       ${data.
-        map((ele)=>
-        getcard(
-          ele.id,
-          ele.img,
-          ele.name,
-          ele.category,
-          ele.price,
-          ele.discount
+        map((ele) =>
+          getcard(
+            ele.id,
+            ele.img,
+            ele.name,
+            ele.category,
+            ele.price,
+            ele.discount
+          )
+
         )
-     
-      )
-    .join("")}
+        .join("")}
     
   </div>`
-    main.innerHTML=carditem;
-    
+    main.innerHTML = carditem;
+
     addtoCard()
   }
- function getcard(id,img,name,category,price,discount){
-  card=`
+  function getcard(id, img, name, category, price, discount) {
+    card = `
 <div class="card" >
   <div class="container" data-id=${id}>
   <img src=${img} alt="" />
@@ -189,54 +332,41 @@ window.addEventListener("load",()=>{
   <p class="discount"> ${discount}% Off</p>
  </div>
 </div>`
- return card;
- }
-const data=JSON.parse(localStorage.getItem("cart"))||[];
- function addtoCard(){
-  let btn=document.querySelectorAll(".button");
- 
- 
-  for(let link of btn){
-    link.addEventListener("click",edit)
+    return card;
   }
-  
-    function edit(e){
-    e.preventDefault()
-    let id=e.target.dataset.id
-      let res= fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
-      res.then((data)=>{
+  const data = JSON.parse(localStorage.getItem("cart")) || [];
+  function addtoCard() {
+    let btn = document.querySelectorAll(".button");
+
+
+    for (let link of btn) {
+      link.addEventListener("click", edit)
+    }
+
+    function edit(e) {
+      e.preventDefault()
+      let id = e.target.dataset.id
+      let res = fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
+      res.then((data) => {
         return data.json()
       })
-      .then((ele)=>{
-        let obj={}
-        obj.quantity=1;
-        obj.name=ele.name,
-        obj.category=ele.category,
-        obj.img=ele.img,
-        obj.price=ele.price,
-        obj.discount=ele.discount,
-        obj.id=ele.id
-        if(checkduplicate(obj)){
+        .then((ele) => {
+          let obj = {}
+
+          obj.name = ele.name,
+            obj.category = ele.category,
+            obj.img = ele.img,
+            obj.price = ele.price,
+            obj.discount = ele.discount,
+            obj.id = ele.id
           data.push(obj)
-          localStorage.setItem("cart",JSON.stringify(data))
-            alert("Product added in cart")
-        }else{
-          alert("Product already in cart")
-        }
-        
-      }) 
-       
+          localStorage.setItem("cart", JSON.stringify(data))
+        })
+
     }
-    
-    
-}
-function checkduplicate(ele){
-  for(let i=0; i<data.length; i++){
-    if(data[i].name===ele.name){
-      return false
-    }
+
+
   }
-  return true
-}
 </script>
+
 </html>

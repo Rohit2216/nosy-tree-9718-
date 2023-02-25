@@ -601,13 +601,10 @@ nav>ul>li a{
 .megamenuitems{
     flex-basis: 10%;
     height: auto;
-    /* margin: 1%; */
-   margin:7px;
+    margin:0.5%;
 }
 
 .megamenuitems h4{
-    /* padding: 10px; */
-    /* background-color:lightgrey; */
     font-size: 13px;
 }
 .megamenuitems h4:hover{
@@ -621,4 +618,8 @@ nav>ul>li a{
 .megamenuitems p:hover{
     color: #FF7035;
     cursor: pointer;
+}
+.megamenuitems img{
+    width:100%;
+    margin-top: 15px;
 }

@@ -22,7 +22,7 @@
     </div>
     <div href="#" id="nav-right">
      <a href="#">Enter pincode
-         <img id="edit" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/external-edit-basic-ui-anggara-basic-outline-anggara-putra.png" alt="">
+         <img id="edit_1" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/external-edit-basic-ui-anggara-basic-outline-anggara-putra.png" alt="">
      </a>
      <a href="#">Find Pepperfry Studio</a>
     </div>
@@ -46,7 +46,7 @@
           alt="error"></a>
       <a href="./login.html"><img src="https://img.icons8.com/material-sharp/256/user.png" alt="error"></a>
       <a href="#"><img src="https://img.icons8.com/ios/256/like.png" alt="error"></a>
-      <a href="#"><img
+      <a href="./card.html"><img
           src="https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/256/external-Add-To-Cart-mobile-shopping-smashingstocks-detailed-outline-smashing-stocks-4.png"
           alt="error"></a>
     </div>
@@ -194,131 +194,131 @@
 
 </body>
 <script>
-  let api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-  let btns = 0;
+let api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+   let btns=0;
 
-  async function countData(api) {
-    let res = await fetch(`${api}`)
-    let data = await res.json()
-    btns = Math.ceil(data.length / 12);
-    paginationButton(btns)
-
-  }
-  // sortBy=price&order=asc forsorting
-  const radioInputs = document.querySelectorAll('input[name="Sort"]');
+async function countData(api){
+  let res = await fetch(`${api}`)
+  let data = await res.json()
+  btns=Math.ceil(data.length/12);
+  paginationButton(btns)
+  
+}
+// sortBy=price&order=asc forsorting
+const radioInputs = document.querySelectorAll('input[name="Sort"]');
   radioInputs.forEach(radioInput => {
     radioInput.addEventListener('change', function () {
       // let api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
-      if (this.value === "desc") {
-        api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        api = `${api}sortBy=price&order=desc`
-        countData(api)
-        fetched(1, api)
-      } else if (this.value === "asc") {
-        api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        api = `${api}sortBy=price&order=asc`
-        fetched(1, api)
-        countData(api)
-      } else {
-        api = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        fetched(1, api)
-        countData(api)
-      }
+         if(this.value==="desc"){
+          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          api=`${api}sortBy=price&order=desc`
+          countData(api)
+          fetched(1,api)
+         }else if(this.value==="asc"){
+          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          api=`${api}sortBy=price&order=asc`
+          fetched(1,api)
+          countData(api)
+         }else{
+          api=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          fetched(1,api)
+          countData(api)
+         }
     });
   })
   const radioa = document.querySelectorAll('input[name="brand"]');
   radioa.forEach(radio => {
-    radio.addEventListener('change', function () {
-      let data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-      if (this.value === "CasaCraft") {
-        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        data = `${data}category=CasaCraft`
-        fetched(1, data)
-        countData(data)
-      } else if (this.value === "ARRA") {
-        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        data = `${data}category=ARRA`
-        fetched(1, data)
-        countData(data)
-
-      } else if (this.value === "Chumbak") {
-        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        data = `${data}category=Chumbak`
-        fetched(1, data)
-        countData(data)
-
-      } else if (this.value === "Woodsworth") {
-        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        data = `${data}category=Woodsworth`
-        fetched(1, data)
-        countData(data)
-
-      } else if (this.value === "Dreamzz_Furniture") {
-        data = `https://63f5b30259c944921f64b2be.mockapi.io/products?`
-        data = `${data}category=Dreamzz%20Furniture`
-        fetched(1, data)
-        countData(data)
-      }
+    radio.addEventListener('change', function() {
+      let data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+         if(this.value==="CasaCraft"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+           data=`${data}category=CasaCraft`
+          fetched(1,data)
+          countData(data)
+         }else if(this.value==="ARRA"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=ARRA`
+          fetched(1,data)
+          countData(data)
+          
+         }else if(this.value==="Chumbak"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=Chumbak`
+          fetched(1,data)
+          countData(data)
+          
+         }else if(this.value==="Woodsworth"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=Woodsworth`
+          fetched(1,data)
+          countData(data)
+          
+         }else if(this.value==="Dreamzz_Furniture"){
+          data=`https://63f5b30259c944921f64b2be.mockapi.io/products?`
+          data=`${data}category=Dreamzz%20Furniture`
+          fetched(1,data)
+          countData(data)
+         }
     });
   })
-  countData(api)
-  window.addEventListener("load", () => {
+   countData(api)
+window.addEventListener("load",()=>{
+  
+  fetched(1,api)
+})
 
-    fetched(1, api)
-  })
+   let main=document.getElementById("cardwraper")
+   async function fetched (page=1,api){
+      try {
+        let req= await fetch(`${api}&page=${page}&limit=12`);
+        let res= await req.json();
 
-  let main = document.getElementById("cardwraper")
-  async function fetched(page = 1, api) {
-    try {
-      let req = await fetch(`${api}&page=${page}&limit=12`);
-      let res = await req.json();
-
-      display(res);
-      // console.log(res)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  let pagebtn = document.getElementById("pagination")
-  function paginationButton(page) {
-    let btn = [];
-    for (let i = 1; i <= page; i++) {
+        display(res);
+        // console.log(res)
+      } catch (error) {
+        console.log(error)
+      }
+   }
+   
+   let pagebtn=document.getElementById("pagination")
+   function paginationButton(page){
+    let btn=[];
+    for(let i=1; i<=page; i++){
       btn.push(`<button class="paginationBtn" data-page-number=${i}>${i}</button>`)
     }
-    pagebtn.innerHTML = btn.join("");
-    const allButton = document.querySelectorAll("#pagination")
-    for (let btn of allButton) {
-      btn.addEventListener("click", (e) => {
+    pagebtn.innerHTML=btn.join("");
+    const allButton=document.querySelectorAll("#pagination")
+    for( let btn of allButton){
+      btn.addEventListener("click",(e)=>{
         e.preventDefault()
-        fetched(e.target.dataset.pageNumber, api)
+        fetched(e.target.dataset.pageNumber,api)
       })
     }
-  }
-  function display(data) {
-    let carditem = `
+   }
+  function display(data){
+    let carditem=`
     <div id="product">
       ${data.
-        map((ele) =>
-          getcard(
-            ele.id,
-            ele.img,
-            ele.name,
-            ele.category,
-            ele.price,
-            ele.discount
-          )
-
+        map((ele)=>
+        getcard(
+          ele.id,
+          ele.img,
+          ele.name,
+          ele.category,
+          ele.price,
+          ele.discount
         )
-        .join("")}
+     
+      )
+    .join("")}
     
   </div>`
-    main.innerHTML = carditem;
-
+    main.innerHTML=carditem;
+    
     addtoCard()
   }
-  function getcard(id, img, name, category, price, discount) {
-    card = `
+ function getcard(id,img,name,category,price,discount){
+  card=`
 <div class="card" >
   <div class="container" data-id=${id}>
   <img src=${img} alt="" />
@@ -332,42 +332,55 @@
   <p class="discount"> ${discount}% Off</p>
  </div>
 </div>`
-    return card;
+ return card;
+ }
+const data=JSON.parse(localStorage.getItem("cart"))||[];
+ function addtoCard(){
+  let btn=document.querySelectorAll(".button");
+ 
+ 
+  for(let link of btn){
+    link.addEventListener("click",edit)
   }
-  const data = JSON.parse(localStorage.getItem("cart")) || [];
-  function addtoCard() {
-    let btn = document.querySelectorAll(".button");
-
-
-    for (let link of btn) {
-      link.addEventListener("click", edit)
-    }
-
-    function edit(e) {
-      e.preventDefault()
-      let id = e.target.dataset.id
-      let res = fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
-      res.then((data) => {
+  
+    function edit(e){
+    e.preventDefault()
+    let id=e.target.dataset.id
+      let res= fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
+      res.then((data)=>{
         return data.json()
       })
-        .then((ele) => {
-          let obj = {}
-
-          obj.name = ele.name,
-            obj.category = ele.category,
-            obj.img = ele.img,
-            obj.price = ele.price,
-            obj.discount = ele.discount,
-            obj.id = ele.id
+      .then((ele)=>{
+        let obj={}
+        obj.quantity=1;
+        obj.name=ele.name,
+        obj.category=ele.category,
+        obj.img=ele.img,
+        obj.price=ele.price,
+        obj.discount=ele.discount,
+        obj.id=ele.id
+        if(checkduplicate(obj)){
           data.push(obj)
-          localStorage.setItem("cart", JSON.stringify(data))
-          alert("added successfully")
-        })
-
+          localStorage.setItem("cart",JSON.stringify(data))
+            alert("Product added in cart")
+        }else{
+          alert("Product already in cart")
+        }
+        
+      }) 
+       
     }
-
-
+    
+    
+}
+function checkduplicate(ele){
+  for(let i=0; i<data.length; i++){
+    if(data[i].name===ele.name){
+      return false
+    }
   }
+  return true
+}
 </script>
 
 </html>

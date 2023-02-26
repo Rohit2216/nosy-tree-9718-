@@ -48,7 +48,7 @@ body{
    
 
 }
-#edit{
+#edit_1{
     width:17px;
     height:17px;
    
@@ -587,7 +587,7 @@ nav>ul>li a{
     visibility: hidden;
     flex-wrap: wrap;
     width:100%;
-    transition:2s;
+    transition:0.1s;
     display: flex;
     left:0px;
     box-shadow:0px 10px 2px 3px lightslategray ;

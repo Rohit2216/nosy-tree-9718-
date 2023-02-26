@@ -24,6 +24,15 @@ The Landing page of Pepperfry.com displays the navigation bar for products, Lear
 ![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/homepage.png?raw=true  "Logo Title Text 1")
 
 
+## middle Page
+-----
+
+From shop By Room user can get idea to decorate their room. Below that we have mentioned some offers for Cushion covers, cup holders etc. Below that we have mentioned some Furniture and décor products which are in trend and some new arrival products. Also, we have mentioned some offers for coffee tables, sofa throws and style carpets etc. Below that these are top brands on Papperfry such as Woodsworth for beds , duroflex for Recliners, etc. Again we have mentioned some home décor idea, user can take inspiration from our blog to décor their home. Also there are some products which are on the top demand. We have provided help to the customer if they need any kind of help while buying product. As well as user can see recently viewed products.
+
+
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/middle.png?raw=true  "Logo Title Text 1")
+
+
 ## Signup Page
 -----
 
@@ -40,6 +49,20 @@ After the successful completion of the signup, your mobile number, username and 
 ![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/day-5/img/login.png?raw=true "Logo Title Text 1")
 
 
+## product Page
+-----
+
+This is the product page of the website. There have all type of categories for furnitures and home decor. we can sort the product price increasing and decreasing and normal. and with the brand name.
+
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/product.png?raw=true "Logo Title Text 1")
+
+
+## Add to cart Page
+-----
+
+Here users can see all the products that are added to cart and also but the product easily.
+
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/add%20to%20cart.png?raw=true "Logo Title Text 1")
 
 ## Footer Page
 ------
@@ -47,5 +70,13 @@ After the successful completion of the signup, your mobile number, username and 
 This is the footer part of my website. There have some data to  our site what's their office and what's contact no. and connect to E-mail id. also.
 
 ![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/day-5/img/footer.png?raw=true  "Logo Title Text 1")
+
+
+## admin Page
+------
+
+This is Admin page of our Website we can add product in main product page and also we can edit product details from here and if we want delete particular product from api we can do this thing also this all operations perform by JS crud operations
+
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/admin.png?raw=true  "Logo Title Text 1")
 
 

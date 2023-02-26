@@ -258,6 +258,29 @@ body{
     cursor: pointer;
     color: white;
   }
+  #editbtn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+  }
+  #edit{
+    background-color: rgb(5, 198, 5);
+    display: block;
+    height: 30px;
+    border: none;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+  }
+  .delete{
+    display: block;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color:red;
+    width: 100px;
+    cursor: pointer;
+  }
   @media screen and (max-width:700px) {
     #mainpage{
         display: flex;

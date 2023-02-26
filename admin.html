@@ -146,6 +146,7 @@ async function UpdateData(){
     main.innerHTML=carditem;
     
     addtoCard()
+    editCard()
   }
  function getcard(id,img,name,category,price,discount){
   card=`
@@ -159,7 +160,10 @@ async function UpdateData(){
    <p class="category">${category}</p>
     <p class="price">₹ ${price}</p>
   <p class="discount"> ${discount}% Off</p>
+  <div id="editbtn">
   <button class="delete"  data-id=${id} >Delete</button>
+  <button class="edit" id="edit" data-id=${id}>Edit</button>
+</div>
  </div>
 </div>`
  return card;
@@ -171,30 +175,48 @@ async function UpdateData(){
  
  
   for(let link of btn){
-    link.addEventListener("click",edit)
+    link.addEventListener("click",deletebtn)
   }
   
-    function edit(e){
+   async function deletebtn(e){
     e.preventDefault()
     let iD=e.target.dataset.id
     try {
-        let res= fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${iD}`,{
+        let res= await fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${iD}`,{
         method:"DELETE",
         headers:{
             'Content-Type' : 'application/json' 
         },
         body:JSON.stringify({id:iD})
       })
-       fetched() 
+      console.log(res)
+      if(res.ok===true){
+        fetched() 
+      }
+      fetched() 
     } catch (error) {
         console.log(error)
+    }  
+    }   
+}
+function editCard(){
+  let links=document.querySelectorAll(".edit");
+  for(let link of links ){
+    link.addEventListener("click",edit)
+  }
+   async function edit(e){
+      e.preventDefault()
+      console.log(e)
+      let id=e.target.dataset.id
+      let res= await fetch(`https://63f5b30259c944921f64b2be.mockapi.io/products/${id}`)
+      let data=await res.json();
+      updateId.value=id;
+      updatName.value=data.name;
+      updateCategory.value=data.category;
+      updateImg.value=data.img;
+      updatePrice.value=data.price
+      updateDisc.value=data.discount
     }
-      
-      
-       
-    }
-    
-    
 }
 
 </script>

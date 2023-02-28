@@ -21,7 +21,7 @@ On first day we discussed website structure and functionalities. On the basis of
 The Landing page of Pepperfry.com displays the navigation bar for products, Learn about a particular product, pricing for the product, Cart Page and the login & signup part, Trending, Popular in Various categories, Just launched furniture.
 
 
-![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/middle.png?raw=true  "Logo Title Text 1")
+![landing page](https://raw.githubusercontent.com/Rohit2216/nosy-tree-9718-/main/img/homepage.png  "Logo Title Text 1")
 
 ## Middle Page
 -----

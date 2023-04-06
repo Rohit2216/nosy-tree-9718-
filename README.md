@@ -76,6 +76,6 @@ This is the footer part of my website. There have some data to  our site what's 
 
 This is Admin page of our Website we can add product in main product page and also we can edit product details from here and if we want delete particular product from api we can do this thing also this all operations perform by JS crud operations
 
-![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/admin.png?raw=true  "Logo Title Text 1")
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/adminpage.png?raw=true  "Logo Title Text 1")
 
 

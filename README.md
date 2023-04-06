@@ -61,7 +61,7 @@ This is the product page of the website. There have all type of categories for f
 
 Here users can see all the products that are added to cart and also but the product easily.
 
-![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/add%20to%20cart.png?raw=true "Logo Title Text 1")
+![landing page](https://github.com/Rohit2216/nosy-tree-9718-/blob/main/img/cartpage.png?raw=true "Logo Title Text 1")
 
 ## Footer Page
 ------

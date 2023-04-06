@@ -84,6 +84,7 @@ img {
  
  
 }
+
 .card{
   
   width: 100%;
@@ -408,6 +409,9 @@ background-color: #F5F5F5;
 
 
 }
+#searchbar input{
+  width:600px;
+}
 .navbar-1 a{
 color:#362712;
 text-decoration: none;
@@ -536,3 +540,4 @@ text-decoration: none;
 width: 90%;
 height:100px;
 }
+

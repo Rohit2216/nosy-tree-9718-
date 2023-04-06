@@ -24,6 +24,9 @@ body{
    
 
 }
+#searchbar input{
+    width:500px;
+}
 .navbar-1{
     width:100%;
     height: 40px;
@@ -563,10 +566,16 @@ header{
     box-sizing: border-box;
 }
 .container{
-    width:1300px;
+    width:98%;
+    /* display: flex; */
     /* width:100%; */
     position: relative;
     margin:auto;
+    /* border:2px solid red; */
+    /* justify-content: space-evenly;
+     */
+     gap:20px;
+
 }
 nav>ul{
    display:flex;
@@ -580,6 +589,8 @@ nav>ul>li a{
     text-decoration: none;
     margin-right: 10px;
 }
+
+
 .megamenu{
     position: absolute;
     top:120%;

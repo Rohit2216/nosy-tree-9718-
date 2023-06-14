@@ -8,7 +8,7 @@ loginBtn.addEventListener('click', (e) => {
     let userMobile = form.mobile.value;
     let password = form.password.value;
     if (userMobile==="1234567890" && password==="admin@123"){
-        alert("Your are admin")
+        alert("Welcome Back! Admin")
         window.location.href='admin.html'
     }
     else if (userMobile === getData.mobileNum && password === getData.password)
